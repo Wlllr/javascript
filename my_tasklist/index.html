@@ -14,26 +14,29 @@
     </header>
 
     <main>
-        <div>
+        <section class="section-one">
             <div>
                 <form id="task-form">
-                    <div class="input-field">
-                        <input type="text" name="task" id="task">
-                        <label for="task">New Task</label>
+                    <div class="input-field-one">
+                        <!-- <label for="task">New Task</label> -->
+                        <input type="text" name="task" id="task" placeholder="New Task" class="specs">
                     </div>
                     <input type="submit" value="Add task" class="btn">
                 </form>
             </div>
+        </section>
+        
+        <section class="section-two">
             <div>
                 <h3>Tasks</h3>
-                <div class="input-field">
-                    <input type="text" name="filter" id="filter">
-                    <label for="filter">Filter Tasks</label>
+                <div class="input-field-two">
+                    <input type="text" name="filter" id="filter" placeholder="Filter Tasks" class="specs">
+                    <!-- <label for="filter">Filter Tasks</label> -->
                 </div>
                 <ul class="collection"></ul>
                 <a href="#" class="clear-tasks">Clear Tasks</a>
             </div>
-        </div>
+        </section>
     </main>
     <!-- <footer>Feito por mim mesmo</footer> -->
 
