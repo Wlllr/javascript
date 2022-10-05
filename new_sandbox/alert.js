@@ -377,3 +377,44 @@ alert (sum (1,1));*/
 //     () => alert('You agreed.'),
 //     () => alert('You canceled the execution.')
 // );
+
+
+// function fazConta (primeiroNumero, segundoNumero) {
+//     let conta = primeiroNumero + segundoNumero;
+//     return conta;
+// }
+
+// // fazConta(2, 3);
+
+// console.log(fazConta(2, 3));
+
+// function frontDoorResponse(line) {
+    
+//     return line[0];
+// }
+
+
+// console.log(frontDoorResponse('stay'));
+// console.log(frontDoorResponse('weller'));
+
+function primeiraPalavra(letra1) {
+    return letra1.charAt([0]);
+}
+
+// function segundaPalavra(letra2) {
+//     return letra2[1];
+// }
+
+// function terceiraPalavra(letra3) {
+//     return letra3[2];
+// }
+
+// function quartaPalavra(letra4) {
+//     return letra4[3];
+// }
+
+// function quintaPalavra(letra5) {
+//     return letra5[4];
+// }
+
+console.log(primeiraPalavra('ola'));
