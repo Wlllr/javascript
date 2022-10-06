@@ -417,4 +417,14 @@ function primeiraPalavra(letra1) {
 //     return letra5[4];
 // }
 
-console.log(primeiraPalavra('ola'));
+console.log(primeiraPalavra('Stands so high'));
+console.log(primeiraPalavra('Huge hooves too'));
+console.log(primeiraPalavra('Impatiently waits for'));
+console.log(primeiraPalavra('Reins and harness'));
+console.log(primeiraPalavra('Eager to leave'));
+
+function frontDoorPassword (word) {
+    return (word.charAt([0])).toUpperCase();
+}
+
+console.log(frontDoorPassword('shire'));
