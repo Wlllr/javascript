@@ -398,6 +398,7 @@ alert (sum (1,1));*/
 // console.log(frontDoorResponse('weller'));
 
 function primeiraPalavra(letra1) {
+    //primeira parte do exercicio
     return letra1.charAt([0]);
 }
 
@@ -423,8 +424,49 @@ console.log(primeiraPalavra('Impatiently waits for'));
 console.log(primeiraPalavra('Reins and harness'));
 console.log(primeiraPalavra('Eager to leave'));
 
+// function frontDoorPassword (word) {
+//     return (word.charAt([0])).toUpperCase();
+// }
+
 function frontDoorPassword (word) {
-    return (word.charAt([0])).toUpperCase();
+    //segunda parte do exercicio
+    if (word == word.toUpperCase()) {
+        return (word.charAt([0]) + word.slice(1).toLowerCase());
+    } else {
+        return (word.charAt([0]).toUpperCase() + word.slice(1));
+    }
+    
 }
 
 console.log(frontDoorPassword('shire'));
+
+// Terceira parte do exercicio
+
+function backDoorResponse (line) {
+    
+    return (
+        line.trim() (line.charAt(line.length - 1))
+    );
+        
+
+    // return line.charAt(line.length - 1);
+
+
+    // return line.trim();
+    // if (line != line.trim()) {
+    //     return line.trim();
+    // } else {
+    //     return line;
+    // }
+
+    // function lineLength (line) {
+    //     return line.charAt(line.length - 1);
+    // }
+}
+
+console.log(backDoorResponse('           Stands so high'));
+console.log(backDoorResponse('Huge hooves too              '));
+console.log(backDoorResponse('Impatiently waits for'));
+console.log(backDoorResponse('Reins and harness'));
+console.log(backDoorResponse('Eager to leave'));
+
