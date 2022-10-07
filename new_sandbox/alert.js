@@ -438,15 +438,14 @@ function frontDoorPassword (word) {
     
 }
 
-console.log(frontDoorPassword('shire'));
+console.log(frontDoorPassword('weller'));
 
 // Terceira parte do exercicio
 
 function backDoorResponse (line) {
     
-    return (
-        line.trim() (line.charAt(line.length - 1))
-    );
+    return line.charAt(line.length - 1);
+    
         
 
     // return line.charAt(line.length - 1);
@@ -464,9 +463,38 @@ function backDoorResponse (line) {
     // }
 }
 
-console.log(backDoorResponse('           Stands so high'));
-console.log(backDoorResponse('Huge hooves too              '));
-console.log(backDoorResponse('Impatiently waits for'));
-console.log(backDoorResponse('Reins and harness'));
-console.log(backDoorResponse('Eager to leave'));
+console.log(backDoorResponse('           Stands so high'.trim()));
+console.log(backDoorResponse('Huge hooves too              '.trim()));
+console.log(backDoorResponse('Impatiently waits for'.trim()));
+console.log(backDoorResponse('Reins and harness'.trim()));
+console.log(backDoorResponse('Eager to leave'.trim()));
 
+// function response(line = lineTrim(line)) {
+    //Isso aqui ta errado
+//     function lineTrim(line) {
+//         return line.trim();
+//     }
+//     console.log(lineTrim('stay'));
+//     return line.charAt(line.length - 1);
+// }
+
+// console.log(response('stay'));
+
+function response (line) {
+    //EUREKA
+    return (line.charAt(line.length - 1));
+}
+
+console.log(response('stay    o    '.trim()));
+
+//Parte quatro do exercicio
+
+function backDoorPassword(word) {
+    if (word == word.toUpperCase()) {
+        return (word.charAt([0]) + word.slice(1).toLowerCase() + ', please');
+    } else {
+        return (word.charAt([0]).toUpperCase() + word.slice(1) + ', please');
+    }
+}
+
+console.log(backDoorPassword('HORSE'));
