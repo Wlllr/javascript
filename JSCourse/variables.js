@@ -9,10 +9,10 @@ console.log(dogOwner, dogName, dogAge);
 dogOwner = "Yuri";
 /*Variables can change values. They exclude the old value, and the new one remains*/
 
-console.log(dogOwner);
+// console.log(dogOwner);
 
-const dogLove = "Forever";
-console.log(dogLove);
+// const dogLove = "Forever";
+// console.log(dogLove);
 
 // let scoops = 5;
 
@@ -22,18 +22,30 @@ console.log(dogLove);
 // }
 // document.write("Life without ice cream isn't the same");
 
-let scoops = 4;
+// let scoops = 4;
 
-if (scoops >= 5) {
-    alert("Eat faster the ice cream is going to melt!");
-} else if (scoops == 3) {
-    alert("Ice cream running low!");
-} else if (scoops == 2) {
-    alert("Going once");
-} else if (scoops == 1) {
-    alert("Going twice");
-} else if (scoops == 0) {
-    alert("Gone!");
-} else {
-    alert("Still lots of ice cream left, come and get it");    
+// if (scoops >= 5) {
+//     alert("Eat faster the ice cream is going to melt!");
+// } else if (scoops == 3) {
+//     alert("Ice cream running low!");
+// } else if (scoops == 2) {
+//     alert("Going once");
+// } else if (scoops == 1) {
+//     alert("Going twice");
+// } else if (scoops == 0) {
+//     alert("Gone!");
+// } else {
+//     alert("Still lots of ice cream left, come and get it");    
+// }
+
+
+let nome = "Joe";
+
+let i = 0;
+
+while (i < 2) {
+    document.write("Happy birthday to you. <br>");
+    i = i + 1;
 }
+document.write(`Happy birthday dear ${nome}. <br>`);
+document.write("Happy birthday to you. <br>");
