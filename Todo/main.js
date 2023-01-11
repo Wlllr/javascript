@@ -66,3 +66,5 @@ window.addEventListener('load', () => {
         });
     });
 });
+
+//Tafera de casa é atraves do window.localStorage(); fazer que as informacoes fiquem na pagina, mesmo depois de ter reiniciado a pagina.
