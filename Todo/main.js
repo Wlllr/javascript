@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const task = input.value;
+        const task = input.value;        
 
         if (!task) {
             alert("Please fill out the task");
@@ -64,7 +64,33 @@ window.addEventListener('load', () => {
         task_delete_el.addEventListener('click', () => {
             list_el.removeChild(task_el);
         });
+
+        input.addEventListener("submit", display);
+
+        function display() {
+            localStorage.setItem("valorSaida", task_content_el);
+            list_el = localStorage.getItem("valorSaida");
+
+        };
+
     });
+
+    // input.addEventListener("submit", (e) => {
+    //     e.preventDefault();
+
+    //     localStorage.setItem("valorSaida", input.value);
+    //     list_el = localStorage.getItem("valorSaida");
+
+    // });
+
+    // input.addEventListener("submit", display);
+    // list_el = localStorage.getItem("valorSaida");
+
+    // function display () {
+    //     localStorage.setItem("valorSaida", input.value);
+    //     list_el = localStorage.getItem("valorSaida");
+    // };
+
 });
 
 //Tafera de casa é atraves do window.localStorage(); fazer que as informacoes fiquem na pagina, mesmo depois de ter reiniciado a pagina.
