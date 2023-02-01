@@ -3,6 +3,15 @@ window.addEventListener('load', () => {
     const input = document.querySelector("#new-task-input");
     const list_el = document.querySelector("#tasks");
 
+    const localStorageTransactions = JSON.parse(localStorage.getItem('transactions'));
+    let transactions = localStorage.getItem('transactions') !== null ? localStorageTransactions : [];
+
+
+    const updateLocalStorage = () => {
+        localStorage.setItem('transactions', JSON.stringify(transactions));
+    };
+
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
@@ -46,7 +55,9 @@ window.addEventListener('load', () => {
         div_el.appendChild(actions_el);
         list_el.appendChild(div_el);
 
+        
         input.value = "";
+
 
         edit_el.addEventListener('click', () => {
             if (edit_el.innerText.toLowerCase() == "edit") {
@@ -61,6 +72,7 @@ window.addEventListener('load', () => {
 
         delete_el.addEventListener('click', () => {
             list_el.removeChild(div_el);
+            updateLocalStorage();
         });
 
     });
