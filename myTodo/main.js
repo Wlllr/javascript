@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
 
         const task = input.value;
 
-        localStorage.setItem('item', task);
+        // localStorage.setItem('item', task);
 
         if (!task) {
             alert("Please fill out the form!");
@@ -26,6 +26,8 @@ window.addEventListener('load', () => {
 
         const div_el = document.createElement("div");
         div_el.classList.add("task");
+
+        localStorage.setItem('item', div_el);
 
         const div_content_el = document.createElement("div");
         div_content_el.classList.add("content");
@@ -60,14 +62,7 @@ window.addEventListener('load', () => {
         
         input.value = "";
         getItem();
-
-        function getItem() {
-            const getItem = localStorage.getItem('item', task);
-
-            
-        }
-
-
+        
         edit_el.addEventListener('click', () => {
             if (edit_el.innerText.toLowerCase() == "edit") {
                 input_el.removeAttribute("readonly");
@@ -82,10 +77,40 @@ window.addEventListener('load', () => {
         delete_el.addEventListener('click', () => {
             list_el.removeChild(div_el);
             localStorage.removeItem('item');
-        });
+        });   
+        
 
+
+        function getItem () {
+            const itens = localStorage.getItem('item');
+    
+            if (itens) {
+                div_el.style.display = "flex";
+    
+                const div_itens = document.querySelector(".task");
+    
+                div_itens.textContent = input.value;
+            }
+            
+        };
 
 
     }); 
+
+
+
+    // function getItem() {
+
+    //     const itemPego = document.querySelector(".task");
+
+    //     localStorage.getItem('item');
+
+    //     if (itemPego) {
+    //         itemPego.style.display = "flex";
+    //     } else {
+    //         itemPego.style.display = "none";
+    //     }
+        
+    // };
 
 });
