@@ -15,9 +15,11 @@ window.addEventListener('load', () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const task = input.value;
+        const task = JSON.parse(localStorage.getItem('item')) || input.value;
 
+        localStorage.setItem('item', JSON.stringify(task));
         // localStorage.setItem('item', task);
+
 
         if (!task) {
             alert("Please fill out the form!");
@@ -27,7 +29,7 @@ window.addEventListener('load', () => {
         const div_el = document.createElement("div");
         div_el.classList.add("task");
 
-        localStorage.setItem('item', div_el);
+        // localStorage.setItem('item', JSON.stringify(div_el));
 
         const div_content_el = document.createElement("div");
         div_content_el.classList.add("content");
@@ -61,7 +63,7 @@ window.addEventListener('load', () => {
 
         
         input.value = "";
-        getItem();
+        // getItem();
         
         edit_el.addEventListener('click', () => {
             if (edit_el.innerText.toLowerCase() == "edit") {
@@ -81,18 +83,18 @@ window.addEventListener('load', () => {
         
 
 
-        function getItem () {
-            const itens = localStorage.getItem('item');
+        // function getItem () {
+        //     const itens = localStorage.getItem('item');
     
-            if (itens) {
-                div_el.style.display = "flex";
+        //     if (itens) {
+        //         div_el.style.display = "flex";
     
-                const div_itens = document.querySelector(".task");
+        //         const div_itens = document.querySelector(".task");
     
-                div_itens.textContent = input.value;
-            }
+        //         div_itens.textContent = input.value;
+        //     }
             
-        };
+        // };
 
 
     }); 
