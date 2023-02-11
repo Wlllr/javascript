@@ -15,9 +15,11 @@ window.addEventListener('load', () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const task = JSON.parse(localStorage.getItem('item')) || input.value;
+        const task = input.value;
 
-        localStorage.setItem('item', JSON.stringify(task));
+        JSON.stringify(localStorage.setItem('item', task));
+
+        // localStorage.setItem('item', JSON.stringify(task));
         // localStorage.setItem('item', task);
 
 
@@ -62,8 +64,23 @@ window.addEventListener('load', () => {
         list_el.appendChild(div_el);
 
         
+        function user () {
+            const disp = task;
+
+            const data = JSON.parse(localStorage.getItem('item'));
+
+            if (!disp && data) {
+                div_el.style.display = "none";
+                div_el.textContent = data;
+            } else {
+                div_el.style.display = "flex";
+                div_el.textContent = data;
+            }
+        };
+
         input.value = "";
         // getItem();
+        user();
         
         edit_el.addEventListener('click', () => {
             if (edit_el.innerText.toLowerCase() == "edit") {
