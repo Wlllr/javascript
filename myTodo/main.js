@@ -3,21 +3,12 @@ window.addEventListener('load', () => {
     const input = document.querySelector("#new-task-input");
     const list_el = document.querySelector("#tasks");
 
-    // const localStorageTransactions = JSON.parse(localStorage.getItem('transactions'));
-    // let transactions = localStorage.getItem('transactions') !== null ? localStorageTransactions : [];
-
-
-    // const updateLocalStorage = () => {
-    //     localStorage.setItem('transactions', JSON.stringify(transactions));
-    // };
-
-
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
         const task = input.value;
 
-        JSON.stringify(localStorage.setItem('item', task));
+        // JSON.stringify(localStorage.setItem('item', task));
 
         // localStorage.setItem('item', JSON.stringify(task));
         // localStorage.setItem('item', task);
@@ -95,7 +86,7 @@ window.addEventListener('load', () => {
 
         delete_el.addEventListener('click', () => {
             list_el.removeChild(div_el);
-            localStorage.removeItem('item');
+            // localStorage.removeItem('item');
         });   
         
 
